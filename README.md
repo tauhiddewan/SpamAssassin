@@ -1,14 +1,20 @@
 # SpamAssassin
 
 
-SpamAssassin is a sophisticated Machine Learning project designed to detect spam messages with high accuracy. The project employs the latest advancements in Natural Language Processing and Machine Learning techniques to achieve an efficient classification of incoming messages.
+SpamAssassin is an advanced machine learning-based spam detection system that uses a powerful language model called Roberta to check whether incoming messages are spam or non-spam. With the ever-increasing amount of unwanted messages, spam detection has become a critical issue for businesses and individuals alike. The SpamAssassin project aims to solve this problem using state-of-the-art machine learning techniques.
 
-The project utilizes a pre-trained deep learning model called Roberta, which has been shown to deliver high accuracy in many Natural Language Processing tasks. To build this project, a combination of publicly available spam datasets from different sources was collected, including SMS, email, and Twitter spam datasets. The dataset was carefully curated and preprocessed to ensure high data quality, and then split into training and testing sets.
+### Methodology:
 
-To prepare the dataset for training, the data is preprocessed and tokenized. The encodings and labels are stored as features, and these features are then used to train the model. The newly trained model is optimized and converted to ONNX format, which is a popular format for deploying machine learning models. The model is then tested and compared with the old training to ensure that the new model exceeds the old model's performance. If the new model performs better, the old model asset is replaced with the new one.
+The SpamAssassin project uses a combination of SMS, email, and Twitter spam datasets for training the model. The dataset is first preprocessed and tokenized, and the resulting encodings and labels are stored as features. These features are then used to train the model using Roberta, a highly accurate and efficient language model. The training dataset is split into training and testing sets to evaluate the performance of the model accurately.
 
-The entire training pipeline is designed to be reproducible as the pipeline is defined. The dataset and the model assets are also version controlled, which ensures that the project is highly traceable and can be audited. This is essential for any project that involves sensitive data, such as messages.
+Once the model is trained, it is optimized and converted into ONNX format. The model is then tested against the old training, and if the new trained model exceeds the older version, the old model asset is replaced with the new one. The whole training pipeline is reproducible as the pipeline is defined, and the dataset and model assets are also version controlled to maintain consistency.
 
-Once the model is ready, it is hosted in the cloud, AWS Lambda to be precise. AWS Lambda is a serverless compute service that allows you to run code without provisioning or managing servers. The web application that allows users to input messages is hosted on an EC2 server, which is a scalable cloud computing service.
+### Deployment:
 
-This project showcases the power of Machine Learning in real-life applications. The SpamAssassin project can be integrated into any system that requires monitoring of fraudulent activities. For instance, this system can be integrated into banking systems to detect fraudulent transactions or email systems to protect against phishing attacks. The possibilities are endless, and the only limitation is the imagination.
+The SpamAssassin project is deployed on AWS Lambda, a highly scalable and cost-effective compute service that allows developers to run code without provisioning or managing servers. The web app, which enables users to input message prompts, is hosted on an EC2 server.
+
+When a user inputs a message prompt, the web app sends a request to the AWS Lambda function, which then uses the SpamAssassin model to determine whether the message is spam or non-spam. The result is then returned to the web app, which displays the output to the user. The SpamAssassin system can be integrated with almost anything to monitor user activities, making it a versatile and useful tool for businesses and individuals alike.
+
+### Conclusion:
+
+The SpamAssassin project is an excellent example of how machine learning can be used to solve real-world problems. By leveraging powerful language models like Roberta, the project has created a highly accurate and efficient spam detection system that can be deployed at scale. With its reproducible training pipeline and version control features, the SpamAssassin project is an excellent model for other machine learning-based projects. Overall, the project demonstrates the potential of machine learning to solve some of the most pressing problems facing businesses and individuals today.
