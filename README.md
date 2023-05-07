@@ -1,19 +1,11 @@
-# TweetInsight: Disaster News Checker
+# TweetSentinel: Disaster News Checker
 
-TweetInsight is an advanced machine learning-based spam detection system that uses a powerful language model called Roberta to check whether incoming messages are spam or non-spam. With the ever-increasing amount of unwanted messages, spam detection has become a critical issue for businesses and individuals alike. The TweetInsight project aims to solve this problem using state-of-the-art machine learning techniques.
+TweetSentinel is an advanced machine learning-based system that uses the "Natural Language Processing with Disaster Tweets" dataset from Kaggle to detect whether news posted on Twitter is real or fake. With the increasing amount of fake news circulating on social media platforms, the TweetSentinel project aims to provide an accurate and efficient solution for businesses and individuals to distinguish between genuine news and fabricated stories.
 
-### Methodology
+The methodology behind TweetSentinel involves preprocessing and tokenizing the dataset to create encodings and labels for the model. The model is then trained using these features with the help of a state-of-the-art language model. The training dataset is split into training and testing sets to evaluate the model's performance.
 
-The TweetInsight project uses a combination of SMS, email, and Twitter spam datasets for training the model. The dataset is first preprocessed and tokenized, and the resulting encodings and labels are stored as features. These features are then used to train the model using Roberta, a highly accurate and efficient language model. The training dataset is split into training and testing sets to evaluate the performance of the model accurately.
+Once the model is trained, it is optimized and deployed on AWS Lambda, a highly scalable and cost-effective compute service that allows developers to run code without managing servers. The web app, which enables users to input tweets, is hosted on an EC2 server.
 
-Once the model is trained, it is optimized and converted into ONNX format. The model is then tested against the old training, and if the new trained model exceeds the older version, the old model asset is replaced with the new one. The whole training pipeline is reproducible as the pipeline is defined, and the dataset and model assets are also version controlled to maintain consistency.
+When a user inputs a tweet, the web app sends a request to the AWS Lambda function, which uses the TweetSentinel model to determine whether the tweet is real or fake news. The result is then returned to the web app, which displays the output to the user. The TweetSentinel system can be integrated with almost anything to monitor tweets, making it a versatile and useful tool for businesses and individuals alike.
 
-### Deployment
-
-The TweetInsight project is deployed on AWS Lambda, a highly scalable and cost-effective compute service that allows developers to run code without provisioning or managing servers. The web app, which enables users to input message prompts, is hosted on an EC2 server.
-
-When a user inputs a message prompt, the web app sends a request to the AWS Lambda function, which then uses the TweetInsight model to determine whether the message is spam or non-spam. The result is then returned to the web app, which displays the output to the user. The TweetInsight system can be integrated with almost anything to monitor user activities, making it a versatile and useful tool for businesses and individuals alike.
-
-### Conclusion
-
-The TweetInsight project is an excellent example of how machine learning can be used to solve real-world problems. By leveraging powerful language models like Roberta, the project has created a highly accurate and efficient spam detection system that can be deployed at scale. With its reproducible training pipeline and version control features, the TweetInsight project is an excellent model for other machine learning-based projects. Overall, the project demonstrates the potential of machine learning to solve some of the most pressing problems facing businesses and individuals today.
+In conclusion, TweetSentinel is a prime example of how machine learning can be used to solve real-world problems. By leveraging powerful language models and the Kaggle dataset, the project has created a highly accurate and efficient system to detect real vs. fake news on Twitter. With its reproducible training pipeline and deployment on AWS Lambda, the TweetSentinel project is a valuable asset for anyone seeking to combat the spread of fake news on social media platforms.
